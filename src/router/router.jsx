@@ -1,5 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import { LayoutBase } from "../Pages/LayoutBase";
+import LayoutBase from "../Paginas/LayoutBase";
+import { Home } from "../Paginas/Home/Home"
+import SelecaoTipoUsuario from "../Paginas/Cadastro/SelecaoTipoUsuario";
+import LayoutBaseCadastro from "../Paginas/Cadastro/LayoutBaseCadastro";
+import DadosCadastro from "../Paginas/Cadastro/DadosCadastro";
+import { Login } from "../Paginas/Login/Login";
 
 export const router = createBrowserRouter([
     {
@@ -7,18 +12,26 @@ export const router = createBrowserRouter([
         element: <LayoutBase/>,
         children: [
             {
+                path: "",
+                element: <Home/>
+            },
+            {
                 path: "cadastro",
-                element: <h1 className="text-9xl">LayoutBaseCadastro</h1>,
+                element: <LayoutBaseCadastro/>,
                 children: [
                     {
                         path: "",
-                        element: <h1 className="text-9xl">SelecaoTipoUsuario</h1>,
+                        element: <SelecaoTipoUsuario/>,
                     },
                     {
-                        path: "dados_cadastro",
-                        element: <h1 className="text-9xl">R</h1>,
+                        path: "dados-cadastro",
+                        element: <DadosCadastro/>,
                     }
                 ]
+            },
+            {
+                path: "login",
+                element: <Login/>
             }
         ]
     }

@@ -88,6 +88,6 @@ export const Navbar = () => {
           </div>
         </div>
       </Container>
-    </header>
-  );
+    </header> 
+  )
 };
