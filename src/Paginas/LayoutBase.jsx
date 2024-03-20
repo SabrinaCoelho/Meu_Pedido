@@ -11,34 +11,34 @@ import { ItemListaInline } from "../Components/Lista/ItemListaInline"
 import { ListaInline } from "../Components/Lista/ListaInline"
 import { Rodape } from "../Components/Rodape/Rodape"
 import { Tipografia } from "../Components/Tipografia/Tipografia"
+import { LoginProvider } from "../Contexto/Login"
 
 const LayoutBase = () => {
     return (
         <>
             <Cabecalho>
                 <Container>
-                    <Row align="center">
-                        {/* <Col>
-                            <FreelandoLogo />
-                        </Col> */}
+                    <Row style={{padding: "10px"}} align="center">
                         <Col >
                             <Link>Sobre</Link>
                         </Col>
                         <Col >
-                            <Link>Cadastro</Link>
+                            <Link to="/cadastro">Cadastro</Link>
                         </Col>
                         <Col >
-                            <Link>Comanda Digital</Link>
+                            <Link to="/comanda-digital">Comanda Digital</Link>
                         </Col>
                         <Col style={{ textAlign: 'right' }}>
-                            <Link>Login</Link>
+                            <Link to="/login">Login</Link>
                         </Col>
                     </Row>
                 </Container>
             </Cabecalho>
-            <Container style={{ height: '100%' }}>
-                <Outlet />
-            </Container>
+            <LoginProvider>
+                <Container >
+                    <Outlet />
+                </Container>
+            </LoginProvider>
             <Rodape>
                 <Container>
                     <Row align="center">

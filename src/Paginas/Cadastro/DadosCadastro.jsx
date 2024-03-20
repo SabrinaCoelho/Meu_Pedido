@@ -10,12 +10,15 @@ const DadosCadastro = () => {
 
     const { 
         usuario, 
-        setNomeCompleto, 
-        setCidade, 
+        setNome, 
+        setTelefone,
+        setRestauranteId,
         setEmail, 
         setSenha, 
+        setCnpj, 
         setSenhaConfirmada, 
-        setUf,
+        setEndereco,
+        setInformacoes,
         submeterUsuario
     } = useCadastroUsuarioContext()
 
@@ -37,18 +40,19 @@ const DadosCadastro = () => {
                 <Row>
                     <Col>
                         <CampoTexto 
-                            titulo="Nome do restaurante" 
-                            valor={usuario.nomeCompleto}
-                            onChange={setNomeCompleto}
+                            titulo="Nome" 
+                            valor={usuario.nome}
+                            onChange={setNome}
                         />
                     </Col>
                 </Row>
                 <Row>
                     <Col lg={8} md={8} sm={8}>
                         <CampoTexto 
-                            titulo="Cidade" 
-                            valor={usuario.cidade}
-                            onChange={setCidade}    
+                            titulo="CNPJ" 
+                            valor={usuario.cnpj}
+                            onChange={setCnpj}  
+                            tipo="number"  
                         />
                     </Col>
                 </Row>
@@ -59,6 +63,33 @@ const DadosCadastro = () => {
                             valor={usuario.email}
                             onChange={setEmail}
                             tipo='email'    
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <CampoTexto 
+                            titulo="Endereço" 
+                            valor={usuario.endereco}
+                            onChange={setEndereco}   
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <CampoTexto 
+                            titulo="Telefone" 
+                            valor={usuario.telefone}
+                            onChange={setTelefone}   
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <CampoTexto 
+                            titulo="Texto informativo" 
+                            valor={usuario.informacoes}
+                            onChange={setInformacoes}   
                         />
                     </Col>
                 </Row>
@@ -105,17 +136,37 @@ const DadosCadastro = () => {
                     <Col>
                         <CampoTexto 
                             titulo="Nome Completo" 
-                            valor={usuario.nomeCompleto}
-                            onChange={setNomeCompleto}
+                            valor={usuario.nome}
+                            onChange={setNome}
                         />
                     </Col>
                 </Row>
                 <Row>
                     <Col lg={8} md={8} sm={8}>
                         <CampoTexto 
-                            titulo="Cidade" 
-                            valor={usuario.cidade}
-                            onChange={setCidade}    
+                            titulo="Funcionário do restaurante:" 
+                            valor={usuario.restauranteId}
+                            onChange={setRestauranteId}    
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg={8} md={8} sm={8}>
+                        <CampoTexto 
+                            titulo="Senha" 
+                            valor={usuario.senha}
+                            onChange={setSenha}   
+                            tipo="password" 
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg={8} md={8} sm={8}>
+                        <CampoTexto 
+                            titulo="Repita a Senha" 
+                            valor={usuario.senhaConfirmada}
+                            onChange={setSenhaConfirmada}
+                            tipo="password" 
                         />
                     </Col>
                 </Row>
@@ -128,18 +179,38 @@ const DadosCadastro = () => {
                 <Row>
                     <Col>
                         <CampoTexto 
-                            titulo="Nome Completo Cliente" 
-                            valor={usuario.nomeCompleto}
-                            onChange={setNomeCompleto}
+                            titulo="Nome Completo" 
+                            valor={usuario.nome}
+                            onChange={setNome}
                         />
                     </Col>
                 </Row>
                 <Row>
                     <Col lg={8} md={8} sm={8}>
                         <CampoTexto 
-                            titulo="Cidade" 
-                            valor={usuario.cidade}
-                            onChange={setCidade}    
+                            titulo="Email" 
+                            valor={usuario.email}
+                            onChange={setEmail}    
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg={8} md={8} sm={8}>
+                        <CampoTexto 
+                            titulo="Senha" 
+                            valor={usuario.senha}
+                            onChange={setSenha}  
+                            tipo="password"   
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg={8} md={8} sm={8}>
+                        <CampoTexto 
+                            titulo="Repita a Senha" 
+                            valor={usuario.senhaConfirmada}
+                            onChange={setSenhaConfirmada}    
+                            tipo="password" 
                         />
                     </Col>
                 </Row>

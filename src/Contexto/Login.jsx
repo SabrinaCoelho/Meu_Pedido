@@ -1,15 +1,15 @@
 import { createContext, useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Login = {
-    login: '',
+const LoginInicial = {
+    email: '',
     senha: ''
 }
 
 export const LoginContext = createContext({
-    login: usuarioInicial,
+    login: LoginInicial,
     erros: {},
-    setLogin: () => null,
+    setEmail: () => null,
     setSenha: () => null,
 })
 
@@ -21,31 +21,30 @@ export const LoginProvider = ({ children }) => {
 
     const navegar = useNavigate()
 
-    //const [login, setLogin] = useState(Login) ?
+    const [login, setLogin] = useState(LoginInicial)
 
-    const setTipo = (tipo) => {
-        console.log("@")
-        console.log(tipo)
-        setUsuario(estadoAnterior => {
+    const setEmail = (email) => {
+        console.log(email)
+        setLogin(estadoAnterior => {
             return {
                 ...estadoAnterior,
-                tipo
+                email
             }
         })
     }
-    const setInteresse = (interesse) => {
-        setUsuario(estadoAnterior => {
+    const setSenha = (senha) => {
+        setLogin(estadoAnterior => {
             return {
                 ...estadoAnterior,
-                interesse
+                senha
             }
         })
     }
     
 
-    const submeterUsuario = () => {
+    const submeterLogin = () => {
         
-        console.log(usuario)
+        console.log(login)
         //navegar('/cadastro/concluido')
     }
 
@@ -54,17 +53,10 @@ export const LoginProvider = ({ children }) => {
     } */
 
     const contexto = {
-        usuario,
-        setTipo,
-        setInteresse,
-        setNomeCompleto,
-        setUf,
-        setCidade,
+        login,
         setEmail,
         setSenha,
-        setSenhaConfirmada,
-        submeterUsuario,
-        //possoSelecionarInteresse
+        submeterLogin
     }
 
     return (

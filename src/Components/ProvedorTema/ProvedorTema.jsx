@@ -6,8 +6,8 @@ const tema = {
         atencao: '',
         focus: '#B009FF',
         primarias: {
-            a: '#5754ED',
-            b: '#D93114',
+            a: '#AF38F8',
+            b: '#38BDF8',
             c: ''
         },
         secundarias: {
@@ -23,7 +23,7 @@ const tema = {
         },
         dark: {
             a: '',
-            b: '#B61B00'
+            b: '#386EF8'
         }
     },
     espacamentos: {

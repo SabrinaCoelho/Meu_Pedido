@@ -3,25 +3,29 @@ import { useNavigate } from 'react-router-dom';
 
 const usuarioInicial = {
     tipo: '',
-    interesse: '',
-    nomeCompleto: '',
-    uf: '',
-    cidade: '',
+    nome: '',
     email: '',
-    senha: '',
-    senhaConfirmada: ''
+    senha:'',
+    restauranteId: '',
+    cnpj: '',
+    endereco: '',
+    telefone: '',
+    senhaConfirmada: '',
+    informacoes: ''
 }
 
 export const CadastroUsuarioContext = createContext({
     usuario: usuarioInicial,
     erros: {},
     setTipo: () => null,
-    setInteresse: () => null,
-    setNomeCompleto: () => null,
-    setUf: () => null,
-    setCidade: () => null,
+    setNome: () => null,
     setEmail: () => null,
     setSenha: () => null,
+    setRestauranteId: () => null,
+    setCnpj: () => null,
+    setEndereco: () => null,
+    setTelefone: () => null,
+    setInformacoes: () => null,
     setSenhaConfirmada: () => null,
     submeterUsuario: () => null,
     possoSelecionarInteresse: () => null
@@ -38,7 +42,6 @@ export const CadastroUsuarioProvider = ({ children }) => {
     const [usuario, setUsuario] = useState(usuarioInicial)
 
     const setTipo = (tipo) => {
-        console.log("@")
         console.log(tipo)
         setUsuario(estadoAnterior => {
             return {
@@ -47,35 +50,11 @@ export const CadastroUsuarioProvider = ({ children }) => {
             }
         })
     }
-    const setInteresse = (interesse) => {
+    const setNome = (nome) => {
         setUsuario(estadoAnterior => {
             return {
                 ...estadoAnterior,
-                interesse
-            }
-        })
-    }
-    const setNomeCompleto = (nomeCompleto) => {
-        setUsuario(estadoAnterior => {
-            return {
-                ...estadoAnterior,
-                nomeCompleto
-            }
-        })
-    }
-    const setUf = (uf) => {
-        setUsuario(estadoAnterior => {
-            return {
-                ...estadoAnterior,
-                uf
-            }
-        })
-    }
-    const setCidade = (cidade) => {
-        setUsuario(estadoAnterior => {
-            return {
-                ...estadoAnterior,
-                cidade
+                nome
             }
         })
     }
@@ -92,6 +71,46 @@ export const CadastroUsuarioProvider = ({ children }) => {
             return {
                 ...estadoAnterior,
                 senha
+            }
+        })
+    }
+    const setRestauranteId = (restauranteId) => {
+        setUsuario(estadoAnterior => {
+            return {
+                ...estadoAnterior,
+                restauranteId
+            }
+        })
+    }
+    const setCnpj = (cnpj) => {
+        setUsuario(estadoAnterior => {
+            return {
+                ...estadoAnterior,
+                cnpj
+            }
+        })
+    }
+    const setEndereco = (endereco) => {
+        setUsuario(estadoAnterior => {
+            return {
+                ...estadoAnterior,
+                endereco
+            }
+        })
+    }
+    const setTelefone = (telefone) => {
+        setUsuario(estadoAnterior => {
+            return {
+                ...estadoAnterior,
+                telefone
+            }
+        })
+    }
+    const setInformacoes = (informacoes) => {
+        setUsuario(estadoAnterior => {
+            return {
+                ...estadoAnterior,
+                informacoes
             }
         })
     }
@@ -117,10 +136,11 @@ export const CadastroUsuarioProvider = ({ children }) => {
     const contexto = {
         usuario,
         setTipo,
-        setInteresse,
-        setNomeCompleto,
-        setUf,
-        setCidade,
+        setNome,
+        setEndereco,
+        setTelefone,
+        setCnpj,
+        setRestauranteId,
         setEmail,
         setSenha,
         setSenhaConfirmada,
