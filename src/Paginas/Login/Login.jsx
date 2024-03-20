@@ -18,30 +18,33 @@ export const Login = () => {
     }
     
     return (
-        <form onSubmit={entrar}>
-            <Row>
-                <Col>
-                    <CampoTexto 
-                        titulo="Usuário" 
-                        valor={login.email}
-                        onChange={setEmail}
-                        tipo="text"
-                    />
-                </Col>
-            </Row>
-            <Row>
-                <Col lg={8} md={8} sm={8}>
-                    <CampoTexto 
-                        titulo="Senha" 
-                        valor={login.senha}
-                        onChange={setSenha}
-                        tipo="password"
-                    />
-                </Col>
-            </Row>
-            <Botao variante="primaria" >
-                Entrar
-            </Botao>
-        </form>
+        <div>
+            <form onSubmit={entrar}>
+                <Row>
+                    <Col>
+                        <CampoTexto 
+                            titulo="Usuário" 
+                            valor={login.email}
+                            onChange={setEmail}
+                            tipo="text"
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg={8} md={8} sm={8}>
+                        <CampoTexto 
+                            titulo="Senha" 
+                            valor={login.senha}
+                            onChange={setSenha}
+                            tipo="password"
+                        />
+                    </Col>
+                </Row>
+                <Botao variante="primaria" >
+                    Entrar
+                </Botao>
+            </form>
+        </div>
+        
     )
 }
