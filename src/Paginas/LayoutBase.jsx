@@ -12,6 +12,7 @@ import { ListaInline } from "../Components/Lista/ListaInline"
 import { Rodape } from "../Components/Rodape/Rodape"
 import { Tipografia } from "../Components/Tipografia/Tipografia"
 import { LoginProvider } from "../Contexto/Login"
+import { ComandaProvider } from "../Contexto/Comanda"
 
 const LayoutBase = () => {
     return (
@@ -35,14 +36,16 @@ const LayoutBase = () => {
                 </Container>
             </Cabecalho>
             <LoginProvider>
-                <Container >
-                    <Outlet />
-                </Container>
+                <ComandaProvider>
+                    <Container >
+                        <Outlet />
+                    </Container>
+                </ComandaProvider>
             </LoginProvider>
             <Rodape>
-                <Container>
+                {/* <Container>
                     
-                </Container>
+                </Container> */}
             </Rodape>
         </>
     )

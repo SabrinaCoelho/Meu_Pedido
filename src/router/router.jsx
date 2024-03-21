@@ -5,6 +5,9 @@ import SelecaoTipoUsuario from "../Paginas/Cadastro/SelecaoTipoUsuario";
 import LayoutBaseCadastro from "../Paginas/Cadastro/LayoutBaseCadastro";
 import DadosCadastro from "../Paginas/Cadastro/DadosCadastro";
 import { Login } from "../Paginas/Login/Login";
+import { IniciarAtendimento } from "../Paginas/IniciarAtendimento/IniciarAtendimento";
+import { ComandaDigital } from "../Paginas/ComandaDigital/ComandaDigital";
+
 
 export const router = createBrowserRouter([
     {
@@ -32,6 +35,14 @@ export const router = createBrowserRouter([
             {
                 path: "login",
                 element: <Login/>
+            },
+            {
+                path: "iniciar-atendimento",
+                element: <IniciarAtendimento/>
+            },
+            {
+                path: "comanda-digital",
+                element: <ComandaDigital/>
             }
         ]
     }

@@ -31,7 +31,7 @@ export const Login = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg={8} md={8} sm={8}>
+                    <Col >
                         <CampoTexto 
                             titulo="Senha" 
                             valor={login.senha}
