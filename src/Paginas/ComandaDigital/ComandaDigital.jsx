@@ -10,55 +10,89 @@ export const ComandaDigital = () => {
 
     const {
         comanda,
-        atendente,
-        erros,
-        cliente,
-        mesa,
-        comandaID,
-        inicio,
-        termino,
+        setErros,
+        setAtendente,
+        setCliente,
+        setMesa,
+        setComandaID,
+        setInicio,
+        setTermino,
+        submeterComanda
     } = useComandaContext()
 
-    const entrar = (event) => {
+    const iniciar = (event) => {
         event.preventDefault();
         console.log(comanda)
     }
     
     return (
         <div>
-            <form onSubmit={entrar}>
-                <Row>
-                    <Col>
-                        <Tipografia variante="body" componente="body">
-                            {comanda.cliente}
-                        </Tipografia>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Tipografia variante="body" componente="body">
-                            {comanda.mesa}
-                        </Tipografia>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Tipografia variante="body" componente="body">
-                            {comanda.atendente}
-                        </Tipografia>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Tipografia variante="body" componente="body">
-                            {comanda.comandaID}
-                        </Tipografia>
-                    </Col>
-                </Row>
+            <Row justify="between">
+                <Tipografia variante="body" componente="body">
+                    Pedido
+                </Tipografia>
+                <Tipografia variante="body" componente="body">
+                    Comanda n° {comanda.comandaID}
+                </Tipografia>
+            </Row>
+            <Row>
+                <Col>
+                    <Tipografia variante="body" componente="body">
+                        {comanda.cliente}
+                    </Tipografia>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <Tipografia variante="body" componente="body">
+                        {comanda.mesa}
+                    </Tipografia>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <Tipografia variante="body" componente="body">
+                        {comanda.atendente}
+                    </Tipografia>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <Tipografia variante="body" componente="body">
+                        {comanda.comandaID}
+                    </Tipografia>
+                </Col>
+            </Row>
+            {/* <form onSubmit={iniciar}>
+                <div>
+                    <Row>
+                        <Col>
+                            <CampoTexto 
+                                titulo="Cliente" 
+                                valor={login.email}
+                                onChange={setEmail}
+                                tipo="text"
+                            />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col >
+                            <CampoTexto 
+                                titulo="Senha" 
+                                valor={login.senha}
+                                onChange={setSenha}
+                                tipo="password"
+                            />
+                        </Col>
+                    </Row>
+                    <Botao variante="primaria" >
+                        Entrar
+                    </Botao>
+                </div>
                 <Botao variante="primaria" >
                     Iniciar atendimento
                 </Botao>
-            </form>
+            </form> */}
         </div>
         
     )

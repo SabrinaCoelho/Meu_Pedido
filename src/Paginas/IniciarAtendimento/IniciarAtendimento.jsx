@@ -27,39 +27,43 @@ export const IniciarAtendimento = () => {
     return (
         <div>
             <form onSubmit={iniciarAtendimento}>
-                <Row>
-                    <Col>
-                        <CampoTexto 
-                            titulo="Cliente" 
-                            valor={comanda.cliente}
-                            onChange={setCliente}
-                            tipo="text"
-                        />
+                <Row justify="center" >
+                    <Col xxx={6} xxl={6} xl={6} lg={6} md={8} sm={12} >
+                        <Row>
+                            <Col>
+                                <CampoTexto 
+                                    titulo="Cliente" 
+                                    valor={comanda.cliente}
+                                    onChange={setCliente}
+                                    tipo="text"
+                                />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <CampoTexto 
+                                    titulo="Mesa" 
+                                    valor={comanda.mesa}
+                                    onChange={setMesa}
+                                    tipo="text"
+                                />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <CampoTexto 
+                                    titulo="Comanda digital" 
+                                    valor={comanda.comandaID}
+                                    onChange={setComandaID}
+                                    tipo="text"
+                                />
+                            </Col>
+                        </Row>
+                        <Botao variante="primaria" >
+                            Iniciar atendimento
+                        </Botao>
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
-                        <CampoTexto 
-                            titulo="Mesa" 
-                            valor={comanda.mesa}
-                            onChange={setMesa}
-                            tipo="text"
-                        />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <CampoTexto 
-                            titulo="Comanda digital" 
-                            valor={comanda.comandaID}
-                            onChange={setComandaID}
-                            tipo="text"
-                        />
-                    </Col>
-                </Row>
-                <Botao variante="primaria" >
-                    Iniciar atendimento
-                </Botao>
             </form>
         </div>
         

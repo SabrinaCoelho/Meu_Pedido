@@ -1,16 +1,7 @@
 import { Col, Container, Row } from "react-grid-system"
-import { Outlet } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 import { Cabecalho } from "../Components/Cabecalho/Cabecalho"
-import { FreelandoLogo } from "../Components/Icones/FreelandoLogo"
-import { IconeInstagram } from "../Components/Icones/IconeInstagram"
-import { IconeTwitch } from "../Components/Icones/IconeTwitch"
-import { IconeTwitter } from "../Components/Icones/IconeTwitter"
-import { IconeWhatsApp } from "../Components/Icones/IconeWhatsApp"
-import { Link } from "../Components/Link/Link"
-import { ItemListaInline } from "../Components/Lista/ItemListaInline"
-import { ListaInline } from "../Components/Lista/ListaInline"
 import { Rodape } from "../Components/Rodape/Rodape"
-import { Tipografia } from "../Components/Tipografia/Tipografia"
 import { LoginProvider } from "../Contexto/Login"
 import { ComandaProvider } from "../Contexto/Comanda"
 
@@ -40,6 +31,12 @@ const LayoutBase = () => {
                     <Container >
                         <Outlet />
                     </Container>
+                    {/* <Row justify="center">
+                        <Col xxx={6} xxl={6} xl={6} lg={6} md={8} sm={12} >
+                            <Outlet />
+                        </Col>
+                    </Row> */}
+                    
                 </ComandaProvider>
             </LoginProvider>
             <Rodape>

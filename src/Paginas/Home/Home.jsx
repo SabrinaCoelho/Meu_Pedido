@@ -24,7 +24,7 @@ export const Home = () => {
                 </div>
                 <div style={{margin: '0 10px'}}>
                     <Link to='/login'>
-                        <Botao  >Login</Botao>
+                        <Botao >Login</Botao>
                     </Link>
                 </div>
             </Row>

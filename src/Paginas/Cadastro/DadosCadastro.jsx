@@ -47,7 +47,7 @@ const DadosCadastro = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg={8} md={8} sm={8}>
+                    <Col>
                         <CampoTexto 
                             titulo="CNPJ" 
                             valor={usuario.cnpj}
@@ -109,24 +109,6 @@ const DadosCadastro = () => {
                         />
                     </Col>
                 </Row>
-                <Row>
-                    <Col lg={6} md={6} sm={6}>
-                        <Link to="/cadastro/interesses">
-                            <Botao variante="secundaria">
-                                Anterior
-                            </Botao>
-                        </Link>
-                    </Col>
-                    <Col lg={6} md={6} sm={6}>
-                        <div style={{ textAlign: 'right' }}>
-                            {/* <Link to='/cadastro/concluido'> */}
-                            <Botao>
-                                Próxima
-                            </Botao>
-                            {/* </Link> */}
-                        </div>
-                    </Col>
-                </Row>
             </>) : null
         }
         {usuario.tipo == 2 ? 
@@ -142,7 +124,7 @@ const DadosCadastro = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg={8} md={8} sm={8}>
+                    <Col>
                         <CampoTexto 
                             titulo="Funcionário do restaurante:" 
                             valor={usuario.restauranteId}
@@ -151,7 +133,7 @@ const DadosCadastro = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg={8} md={8} sm={8}>
+                    <Col>
                         <CampoTexto 
                             titulo="Senha" 
                             valor={usuario.senha}
@@ -161,7 +143,7 @@ const DadosCadastro = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg={8} md={8} sm={8}>
+                    <Col >
                         <CampoTexto 
                             titulo="Repita a Senha" 
                             valor={usuario.senhaConfirmada}
@@ -186,7 +168,7 @@ const DadosCadastro = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg={8} md={8} sm={8}>
+                    <Col>
                         <CampoTexto 
                             titulo="Email" 
                             valor={usuario.email}
@@ -195,7 +177,7 @@ const DadosCadastro = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg={8} md={8} sm={8}>
+                    <Col >
                         <CampoTexto 
                             titulo="Senha" 
                             valor={usuario.senha}
@@ -205,7 +187,7 @@ const DadosCadastro = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg={8} md={8} sm={8}>
+                    <Col >
                         <CampoTexto 
                             titulo="Repita a Senha" 
                             valor={usuario.senhaConfirmada}
@@ -217,6 +199,24 @@ const DadosCadastro = () => {
                 
             </>) : null
         }
+        <Row>
+            <Col lg={6} md={6} sm={6}>
+                <Link to="..">
+                    <Botao variante="secundaria">
+                        Anterior
+                    </Botao>
+                </Link>
+            </Col>
+            <Col lg={6} md={6} sm={6}>
+                <div style={{ textAlign: 'right' }}>
+                    {/* <Link to='/cadastro/concluido'> */}
+                    <Botao>
+                        Próxima
+                    </Botao>
+                    {/* </Link> */}
+                </div>
+            </Col>
+        </Row>
     </form>)
 }
 
